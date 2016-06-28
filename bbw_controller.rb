@@ -1,6 +1,6 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require(pry-byebug)
+require('pry-byebug')
 require_relative('./models/bbw')
 
   get '/bbw/new' do
@@ -9,7 +9,7 @@ require_relative('./models/bbw')
 
   post '/bbw' do
     @bbw = Bbw.new(params)
-    @bbw.save
+    @bbw.save()
     erb(:create)
   end
 
@@ -17,5 +17,4 @@ require_relative('./models/bbw')
     @bbws = Bbw.all()
     erb(:index)
   end
-
 

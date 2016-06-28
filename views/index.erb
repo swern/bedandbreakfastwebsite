@@ -1,0 +1,10 @@
+<h2>Our Wonderful Guests</h2>
+
+<% @bbws.each do |bbw| %>
+  <b>Name: </b>
+  <p><%= bbw.pretty_name() %></p>
+  <b>Order: </b>
+  <p><%= bbw.nights %> nights in a <%= bbw.room_type %> room</p>
+  <br>
+  <p><%= bbw.breakfast %> to breakfast</p>
+<% end %>
